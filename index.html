@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snakes & Ladders</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/common.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar modernTopbar">
+    <div class="brandWrap">
+      
+      <div>
+        <div class="brand">Snakes &amp; Ladders</div>
+        
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#rules">Rules</a>
+      <a href="highscores.html">High Scores</a>
+      <a href="#about">About</a>
+      <a href="game.html" class="navCta">Play</a>
+    </nav>
+
+    <div class="themePicker glassControl">
+      <label for="themeSelect">Theme</label>
+      <select id="themeSelect" aria-label="Theme">
+        <option value="theme-classic">Classic</option>
+        <option value="theme-dark">Dark</option>
+        <option value="theme-jungle">Jungle</option>
+        <option value="theme-space">Space</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section heroSection modernHeroSection">
+      <div class="heroBackdrop heroGlowOne"></div>
+      <div class="heroBackdrop heroGlowTwo"></div>
+
+      <div class="heroGrid modernHeroGrid">
+        <div class="heroText heroContentCard">
+          <span class="eyebrow">Retro board game • Modern interface</span>
+          <h1 class="h1">Roll fast. Climb smart. Beat the leaderboard.</h1>
+          <p class="subtle heroLead">
+            Experience Snakes &amp; Ladders with bold visuals, animated turns, multiple themes,
+            and a clean interface that feels much more modern than a basic classroom board.
+          </p>
+
+          <div class="heroButtons">
+            <a href="game.html" class="btn primary glowBtn">Start Playing</a>
+            <a href="highscores.html" class="btn secondaryBtn">View High Scores</a>
+          </div>
+
+          <div class="heroStats">
+            <div class="statCard">
+              <strong>100</strong>
+              <span>Final square</span>
+            </div>
+            <div class="statCard">
+              <strong>4</strong>
+              <span>Theme styles</span>
+            </div>
+            <div class="statCard">
+              <strong>Fast</strong>
+              <span>Smooth gameplay</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroVisualWrap">
+          <div class="heroBoardFrame floatingCard">
+            <div class="heroMiniBadge badgeTop">Best experience on desktop + mobile</div>
+            <img src="images/board2.png" alt="Snakes and Ladders game board preview" class="heroBoardImg">
+            <div class="heroMiniBadge badgeBottom">🎲 Smooth turns • 🏆 Competitive scores</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section aboutSection modernSectionTone">
+      <div class="sectionHeading">
+        <span class="eyebrow">About the game</span>
+        <h2 class="centerTitle leftOnWide">Built with simple tech, designed to feel premium</h2>
+      </div>
+
+      <div class="aboutRow modernAboutRow">
+        <div class="aboutText featurePanel">
+          <h3>Modernized classic gameplay</h3>
+          <p>
+            This project is built with HTML, CSS, and JavaScript, but styled to feel more like a polished
+            modern landing page than a school demo. It focuses on clarity, spacing, and a stronger visual hierarchy.
+          </p>
+          <ul class="featureList">
+            <li>Responsive layout for smaller screens</li>
+            <li>Cleaner navigation and section flow</li>
+            <li>Visual cards that highlight key actions</li>
+          </ul>
+        </div>
+        <div class="aboutImage visualPanel">
+          <img src="images/board3.png" alt="Gameplay preview board art">
+        </div>
+      </div>
+
+      <div class="aboutRow reverse modernAboutRow">
+        <div class="aboutText featurePanel">
+          <h3>Fun extras that keep it engaging</h3>
+          <p>
+            Players can enjoy animated movement, theme switching, score tracking, and audio support.
+            The result is still lightweight, but much more enjoyable to browse and play.
+          </p>
+          <ul class="featureList">
+            <li>Theme switching with saved preference</li>
+            <li>Fast access to gameplay and scores</li>
+            <li>Designed to feel playful without clutter</li>
+          </ul>
+        </div>
+        <div class="aboutImage visualPanel">
+          <img src="images/board4.png" alt="Alternate board preview">
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="section rulesSection">
+      <div class="sectionHeading">
+        <span class="eyebrow">How it works</span>
+        <h2 class="centerTitle">Simple rules. Competitive finish.</h2>
+      </div>
+
+      <div class="rulesGrid modernRulesGrid">
+        <div class="ruleCard modernRuleCard">
+          <div class="ruleIcon">🎲</div>
+          <h3>Roll the dice</h3>
+          <p>Each turn pushes you closer to square 100. Every roll matters.</p>
+        </div>
+
+        <div class="ruleCard modernRuleCard">
+          <div class="ruleIcon">🪜</div>
+          <h3>Catch a ladder</h3>
+          <p>Land on the right square and climb upward instantly for a big advantage.</p>
+        </div>
+
+        <div class="ruleCard modernRuleCard">
+          <div class="ruleIcon">🐍</div>
+          <h3>Avoid snakes</h3>
+          <p>One bad landing can send you backward and change the whole race.</p>
+        </div>
+
+        <div class="ruleCard modernRuleCard highlightRuleCard">
+          <div class="ruleIcon">🏁</div>
+          <h3>Finish in fewer moves</h3>
+          <p>Winning is good. Winning fast is better if you want your name on the leaderboard.</p>
+        </div>
+      </div>
+
+      <div class="centerBtn">
+        <a href="game.html" class="btn primary glowBtn">Play Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Snakes &amp; Ladders © 2026 · Designed with a cleaner modern front end
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

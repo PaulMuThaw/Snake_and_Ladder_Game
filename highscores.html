@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snakes & Ladders | High Scores</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/common.js"></script>
+  <script defer src="js/highscores.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="theme-classic">
+  <header class="topbar modernTopbar">
+    <div class="brandWrap">
+      <div class="brandBadge">🏆</div>
+      <div>
+        <div class="brand">Snakes &amp; Ladders</div>
+        <div class="brandSub">Leaderboard and best runs</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#rules">Rules</a>
+      <a class="active" href="highscores.html">High Scores</a>
+      <a href="index.html#about">About</a>
+      <a href="game.html" class="navCta">Play</a>
+    </nav>
+
+    <div class="topbarRight">
+      <div class="themePicker glassControl">
+        <label for="themeSelect">Theme</label>
+        <select id="themeSelect" aria-label="Theme">
+          <option value="theme-classic">Classic</option>
+          <option value="theme-dark">Dark</option>
+          <option value="theme-jungle">Jungle</option>
+          <option value="theme-space">Space</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container scorePageShell">
+    <section class="scoreHeroCard">
+      <div>
+        <span class="eyebrow">Leaderboard</span>
+        <h1>Fastest wins at a glance</h1>
+        <p class="subtle">
+          The best players earn their place here. Fewer moves mean a stronger run,
+          so challenge yourself and try to take the top spot.
+        </p>
+      </div>
+      <div class="scoreHeroActions">
+        <a class="btn primary glowBtn" href="game.html">Play Now</a>
+        <button id="clearBtn" class="btn secondaryBtn">Clear Scores</button>
+      </div>
+    </section>
+
+    <section class="card scoreboard premiumScoreboard">
+      <div class="scoreboardTop premiumScoreHeader">
+        <div class="scoreboardTitle">
+          <span class="trophy">🏆</span>
+          <div>
+            <h2>Top Players</h2>
+            <p class="small">Top 3 fastest results saved on this browser</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scoreTable premiumScoreTable">
+        <div class="scoreRow head">
+          <div class="rankCell"></div>
+          <div class="cell headCell">Player</div>
+          <div class="cell headCell">Moves</div>
+          <div class="cell headCell">Token Color</div>
+        </div>
+
+        <div class="scoreRow premiumScoreRow rankOne">
+          <div class="rankCell"><span class="rankBadge">No.1</span></div>
+          <div class="cell scorePlayerCell" id="name1">-</div>
+          <div class="cell scoreMovesCell" id="moves1">-</div>
+          <div class="cell colorCell">
+            <span class="swatch" id="swatch1"></span>
+            <span id="color1">-</span>
+          </div>
+        </div>
+
+        <div class="scoreRow premiumScoreRow rankTwo">
+          <div class="rankCell"><span class="rankBadge">No.2</span></div>
+          <div class="cell scorePlayerCell" id="name2">-</div>
+          <div class="cell scoreMovesCell" id="moves2">-</div>
+          <div class="cell colorCell">
+            <span class="swatch" id="swatch2"></span>
+            <span id="color2">-</span>
+          </div>
+        </div>
+
+        <div class="scoreRow premiumScoreRow rankThree">
+          <div class="rankCell"><span class="rankBadge">No.3</span></div>
+          <div class="cell scorePlayerCell" id="name3">-</div>
+          <div class="cell scoreMovesCell" id="moves3">-</div>
+          <div class="cell colorCell">
+            <span class="swatch" id="swatch3"></span>
+            <span id="color3">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scoreFooterNote">
+        <p class="small">Tip: fewer moves usually means smarter ladder luck and fewer snake mistakes.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Aim for fewer moves 🎯</footer>
+</body>
+</html>

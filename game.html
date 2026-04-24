@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snakes & Ladders | Game</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/common.js"></script>
+  <script defer src="js/game.js"></script>
+</head>
+
+<body class="theme-classic">
+
+  <header class="topbar">
+    <div class="brand">🐍🪜 Snakes & Ladders</div>
+
+    <nav class="nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#rules">Rules</a>
+      <a href="highscores.html">High Scores</a>
+      <a href="index.html#about">About</a>
+      <a class="active" href="game.html">Play</a>
+    </nav>
+
+    <div class="themePicker">
+      <label for="themeSelect">Theme</label>
+      <select id="themeSelect" aria-label="Theme">
+        <option value="theme-classic">Classic</option>
+        <option value="theme-dark">Dark</option>
+        <option value="theme-jungle">Jungle</option>
+        <option value="theme-space">Space</option>
+      </select>
+    </div>
+
+    <!-- 🎵 Music Button -->
+    <button id="musicToggle" class="musicBtn" type="button" aria-label="Toggle music">🎵</button>
+  </header>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="audio/bg-music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="container gameLayout">
+    <!-- BOARD -->
+    <section class="boardWrap card">
+      <div class="boardStage" id="boardStage">
+        <img id="boardImage" src="images/board.png" class="boardImage" alt="Board" />
+        <canvas id="overlay" class="overlay"></canvas>
+        <div id="board"></div>
+      </div>
+    </section>
+
+    <!-- PANEL -->
+    <aside class="panel card">
+      <h2 class="panelTitle">Game Controls</h2>
+
+      <div class="controlGroup">
+        <label for="boardSelect">Board</label>
+        <div class="row">
+          <select id="boardSelect" class="input" aria-label="Board selection">
+            <option value="classic" selected>Classic Board</option>
+            <option value="green">Green Board</option>
+            <option value="pastel">Pastel Board</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="controlGroup">
+        <label>Players</label>
+        <div class="row actionRow">
+          <select id="playerCount" class="input" aria-label="Player count">
+            <option value="2" selected>2 Players</option>
+            <option value="3">3 Players</option>
+            <option value="4">4 Players</option>
+          </select>
+          <button id="startBtn" class="btn primary" type="button">Start / Reset</button>
+          <button id="restartBtn" class="btn subtleBtn" type="button">Restart Game</button>
+        </div>
+      </div>
+
+      <div class="controlGroup">
+        <label>Player names</label>
+        <div id="nameFields" class="nameFields"></div>
+      </div>
+
+      <div class="playerTurnPanel">
+        <div class="playerTurnHeader">
+          <span>Current turn</span>
+          <span class="small">Live player highlight</span>
+        </div>
+        <div id="legend" class="legend turnLegend"></div>
+      </div>
+
+      <div class="statusBox">
+        <div><strong>Turn:</strong> <span id="turnLabel">—</span></div>
+        <div><strong>Total turns:</strong> <span id="turnCount">0</span></div>
+        <div><strong>Positions:</strong> <span id="posSummary">—</span></div>
+      </div>
+
+      <div class="controlGroup">
+        <label class="inlineCheck" for="soundOn">
+          <input id="soundOn" type="checkbox" checked />
+          <span>Sound effects</span>
+        </label>
+      </div>
+
+      <div class="diceArea">
+        <div id="dice" class="dice" aria-label="Dice">🎲</div>
+        <button id="rollBtn" class="btn primary full" type="button">Roll Dice</button>
+      </div>
+
+      <div id="message" class="message" role="status"></div>
+    </aside>
+  </main>
+
+  <div id="winModal" class="modalOverlay" aria-hidden="true">
+    <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+      <div class="modalEmoji">🎉</div>
+      <h2 id="winTitle">We have a winner!</h2>
+      <p id="winText" class="subtle">Player wins the game.</p>
+      <div class="modalActions">
+        <button id="playAgainBtn" class="btn primary" type="button">Play Again</button>
+        <a href="highscores.html" class="btn secondaryBtn">View High Scores</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
