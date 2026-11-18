@@ -1,0 +1,63 @@
+VELOCITI BICYCLE SHOP - REQUIREMENTS
+
+PROJECT TYPE
+
+PHP and MySQL web application.
+
+IMPORTANT
+
+This project does not use Python packages, so this file is not a Python
+pip requirements file. Do not run: pip install -r requirements.txt
+
+SOFTWARE REQUIREMENTS
+
+1.  PHP 8.0 or later (recommended)
+2.  MySQL 8.0 or MariaDB 10.4 or later
+3.  Apache web server
+4.  XAMPP, WAMP, or an equivalent local PHP/MySQL environment
+5.  Modern web browser
+6.  Internet connection for frontend libraries loaded from CDNs
+
+PHP EXTENSIONS
+
+-   PDO
+-   PDO MySQL (pdo_mysql)
+-   File uploads enabled (file_uploads)
+
+FRONTEND LIBRARIES
+
+The project loads these libraries through CDN links: - Tailwind CSS -
+Alpine.js - Chart.js - Font Awesome
+
+DATABASE REQUIREMENTS
+
+-   MySQL database: bicycleshop_db
+-   Import or create the database tables required by the application.
+-   Configure the database connection in:
+    -   db_conn.php
+    -   customer/db_conn.php
+
+LOCAL DEVELOPMENT
+
+1.  Install and start Apache and MySQL (for example, using XAMPP).
+
+2.  Place the project folder inside the web server document root.
+
+3.  Create the bicycleshop_db database.
+
+4.  Import the project database SQL file, if available, or create the
+    required tables and initial records.
+
+5.  Update the database connection settings.
+
+6.  Open the customer site in a browser:
+    http://localhost/bicycle_shop-main/customer/
+
+    Admin entry point: http://localhost/bicycle_shop-main/
+
+SECURITY NOTES
+
+-   Use a strong database password outside local development.
+-   Do not publish database credentials.
+-   Validate uploaded files and user input before production deployment.
+-   Configure HTTPS before making the site publicly accessible.
